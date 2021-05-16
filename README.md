@@ -11,7 +11,7 @@
 
 --------------------------------------------------
 
-![caption](https://github.com/mjaroszewski1979/stooq-api/blob/main/stooq_api.gif)
+![caption](https://github.com/mjaroszewski1979/stooq-api/blob/main/stooq_fastapi.gif)
 
   
   Live | Code | Docker | Technologies
