@@ -11,6 +11,12 @@
 
 --------------------------------------------------
 
+### Code Coverage
+
+<img src="https://github.com/mjaroszewski1979/stooq-api/blob/main/coverage_img.png">
+
+--------------------------------------------------
+
 ![caption](https://github.com/mjaroszewski1979/stooq-api/blob/main/stooq_fastapi.gif)
 
   
