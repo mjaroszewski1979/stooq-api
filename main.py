@@ -34,6 +34,8 @@ def index():
 @app.get('/stock/{symbol}')
 def get_data(symbol):
     data = stock_data.get_data(symbol)
+    
+    # Returning correct status code when provided with non existing stock symbol
     if not data:
         raise fastapi.HTTPException(status_code=404)
 
