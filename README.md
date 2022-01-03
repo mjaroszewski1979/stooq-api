@@ -13,7 +13,7 @@
 
 ### Code Coverage
 
-<img src="https://github.com/mjaroszewski1979/stooq-api/blob/main/coverage_img.png">
+<img src="https://github.com/mjaroszewski1979/stooq-api/blob/main/cov_report.png">
 
 --------------------------------------------------
 
