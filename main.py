@@ -1,13 +1,22 @@
+# Import the FastAPI module for creating API endpoints
 import fastapi
+# Import uvicorn for running the FastAPI application
 import uvicorn
+# Import custom stock_data module for fetching stock data
 import stock_data
+# Import HTMLResponse for returning HTML content
 from fastapi.responses import HTMLResponse
 
-
+# Initialize FastAPI app
 app = fastapi.FastAPI()
 
 @app.get('/')
 def index():
+    """
+    Endpoint to display the main page of the Stooq Data API application.
+    Returns an HTML page with information about the application and how to use the API.
+    """
+    
     html_content = """
     <html>
         <head>
@@ -33,9 +42,19 @@ def index():
 
 @app.get('/stock/{symbol}')
 def get_data(symbol):
+    """
+    Endpoint to fetch and return stock data for a given symbol.
+    Args:
+        symbol (str): The stock symbol for which data is to be fetched.
+    Returns:
+        data (dict): The stock data retrieved from the stock_data module.
+    Raises:
+        fastapi.HTTPException: If the provided stock symbol does not exist, returns a 404 status code.
+    """
+    
     data = stock_data.get_data(symbol)
     
-    # Returning correct status code when provided with non existing stock symbol
+    # Return a 404 status code if the provided stock symbol does not exist
     if not data:
         raise fastapi.HTTPException(status_code=404)
 
